@@ -1,0 +1,4 @@
+# Project dependencies
+faiss-cpu
+openai
+python-dotenv
