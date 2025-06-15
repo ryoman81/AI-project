@@ -3,3 +3,6 @@
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints
+
+# HF checkpoints and model results
+results

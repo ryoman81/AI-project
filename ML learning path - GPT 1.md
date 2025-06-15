@@ -7,9 +7,9 @@
 
 ## 🔹 2.1 Hugging Face Transformers 基础
 
-- [ ] 使用 `transformers.pipeline` 进行快速原型开发
-- [ ] 使用 `AutoTokenizer`, `AutoModelFor*` 构建自定义流程
-- [ ] 理解模型类型（GPT, T5, BERT, DistilBERT, Falcon, etc.）
+- [x] 使用 `transformers.pipeline` 进行快速原型开发
+- [x] 使用 `AutoTokenizer`, `AutoModelFor*` 构建自定义流程
+- [x] 理解模型类型（GPT, T5, BERT, DistilBERT, Falcon, etc.）
 - [ ] 熟练查阅与选择模型卡（Model Hub）
 
 ---
@@ -24,9 +24,9 @@
 
 ## 🔹 2.3 微调（Fine-tuning）技术
 
-- [ ] 使用 `datasets` 和 `Trainer` 实现标准微调流程
+- [x] 使用 `datasets` 和 `Trainer` 实现标准微调流程
 - [ ] 数据清洗与格式准备（json, csv, arrow）
-- [ ] 使用 PEFT 进行轻量微调（LoRA, QLoRA, Adapters）
+- [x] 使用 PEFT 进行轻量微调（LoRA, QLoRA, Adapters）
 - [ ] 模型训练技巧（learning rate, weight decay, early stopping）
 - [ ] 模型验证与保存（metrics, checkpoint）
 
