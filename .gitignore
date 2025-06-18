@@ -6,3 +6,6 @@
 
 # HF checkpoints and model results
 results
+
+# Python cache
+__pycache__

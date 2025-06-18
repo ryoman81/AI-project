@@ -1,16 +1,16 @@
 # RAG Local Demo
 
-本项目为本地化的检索增强生成（RAG）系统示例，支持本地文档知识库、嵌入、向量检索与生成。
+This project is a local Retrieval-Augmented Generation (RAG) system demo, supporting local document knowledge base, embedding, vector retrieval, and generation.
 
-## 目录结构
+## Directory Structure
 
-- `app/` 主程序代码
-- `data/` 原始文档
-- `outputs/` 检索与生成结果
-- `notebooks/` 调试用 Jupyter Notebooks
+- `app/` Main application code
+- `data/` Original documents
+- `outputs/` Retrieval and generation results
+- `notebooks/` Jupyter Notebooks for debugging
 
-## 快速开始
+## Quick Start
 
-1. 安装依赖：`pip install -r requirements.txt`
-2. 配置 `.env` 文件
-3. 运行主程序：`python main.py`
+1. Install dependencies: `pip install -r requirements.txt`
+2. Configure the `.env` file
+3. Run the main program: `python main.py`

@@ -1,4 +1,12 @@
-# Project dependencies
-faiss-cpu
-openai
-python-dotenv
+# RAG related requirements for local demo development
+
+# RAG toolchain and vector store
+langchain>=0.1.20
+chromadb>=0.4.24
+sentence-transformers>=2.6.1
+faiss-cpu>=1.8.0
+
+# Optional: OpenAI for LLMs
+python-dotenv>=1.0.1
+fastapi>=0.111.0
+uvicorn>=0.29.0
