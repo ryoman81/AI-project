@@ -1,0 +1,3 @@
+Welcome to Contoso Inc. Our working hours are from 9:00 AM to 5:00 PM, Monday through Friday. Employees are expected to attend daily stand-up meetings at 9:15 AM.
+
+All paid time off (PTO) requests must be submitted at least two weeks in advance through the HR portal. For IT issues, please submit a ticket via the internal helpdesk system.

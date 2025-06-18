@@ -1,7 +1,7 @@
 # app/orchestration.py
 
 from typing import List
-from app.document_loader import load_documents_txt
+from app.document_loader import load_documents_txt, split_documents
 from app.embedder import Embedder
 from app.vector_store import VectorStore
 from app.generator import AnswerGenerator
@@ -25,21 +25,23 @@ def orchestration(query: str) -> str:
     """
     # Step 1: Load documents
     docs: List[str] = load_documents_txt("data/sample_docs")
-    
-    # Step 2: Embed documents and query
+    # Step 1.5: Split documents into chunks
+    chunks: List[str] = split_documents(docs, chunk_size=300, overlap=50)
+
+    # Step 2: Embed document chunks and query
     embedder = Embedder()
-    doc_embeddings = embedder.embed_texts(docs)  # np.ndarray
+    doc_embeddings = embedder.embed_texts(chunks)  # np.ndarray
 
     # Step 3: Build vector store from document embeddings
     dimension = doc_embeddings.shape[1]
     vector_store = VectorStore(dimension)
-    vector_store.add_documents(doc_embeddings, docs)
+    vector_store.add_documents(doc_embeddings, chunks)
 
-    # Step 4: Search for similar documents based on query embedding
+    # Step 4: Search for similar document chunks based on query embedding
     query_embedding = embedder.embed_texts([query])[0]  # 1D np.ndarray
-    retrieved_docs = vector_store.search(query_embedding, k=1)
-    
-    # Step 5: Generate answer conditioned on retrieved documents and query
+    retrieved_docs = vector_store.search(query_embedding, k=3)
+
+    # Step 5: Generate answer conditioned on retrieved document chunks and query
     generator = AnswerGenerator()
     context = [doc["text"] for doc in retrieved_docs]
     answer = generator.generate_answer(query, context)
